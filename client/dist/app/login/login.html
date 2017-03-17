@@ -1,0 +1,26 @@
+<div class="login">
+   <fieldset class="form-horizontal">
+     <legend>登录</legend>
+     <form ng-submit="doLogin();">
+       <div class="form-group">
+         <label class="col-xs-3 control-label"for="">账户：</label>
+         <div class="col-xs-8">
+           <input type="text" class="form-control" placeholder="来着何人，报上名来" 
+            ng-model="user.name">
+            <p class="errorM">{{message}}</p>
+         </div>
+       </div>
+       <div class="form-group">
+         <label class="col-xs-3 control-label"for="">密码：</label>
+         <div class="col-xs-8">
+           <input type="password" class="form-control" ng-model="user.password">
+           <p class="errorM">{{passError}}</p>
+         </div>
+       </div>
+       <div class="dl">
+         <button class="btn btn-primary">登录</button>
+         <span class="span">还没有账户？<a href="#!/register">注册</a></span>
+       </div>
+     </form>
+   </fieldset>
+</div>

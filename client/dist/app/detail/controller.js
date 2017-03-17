@@ -1,0 +1,1 @@
+"use strict";angular.module("detailApp",["ngRoute"]).config(["$routeProvider",function(e){e.when("/detail",{controller:"detailController",templateUrl:"/app/detail/detail.html"})}]).controller("detailController",["$scope","$window","$location",function(e,t,l){e.user=t.name,e.exit=function(){l.path("/"),t.name=""}}]);

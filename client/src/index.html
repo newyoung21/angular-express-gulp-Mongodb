@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>前后端分离</title>
+  <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/public.css">
+</head>
+<body ng-app="logonApp">
+ <div class="panel panel-default">
+   <div class="panel-heading">
+    <h2 class="panel-title">
+      gulp+angular+express 前后端分离
+    </h2> 
+   </div>
+   <div class="panel-body">
+     <div ng-view>
+     </div>
+   </div>
+   <div class="panel-footer">
+     <a href="https://github.com/newyoung21" target="_blank">newyoung21</a>
+   </div>
+ </div>
+  <script src="assets/angular/angular.js"></script>
+  <script src="assets/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="app/login/controller.js"></script>
+  <script src="app/register/controller.js"></script>
+  <script src="app/detail/controller.js"></script>
+</body>
+</html>

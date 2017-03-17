@@ -1,0 +1,42 @@
+<div class="login">
+   <fieldset class="form-horizontal">
+     <legend>注册新账户</legend>
+     <form ng-submit="doRegister(form.$valid);" name="form" novalidate>
+       <div class="form-group">
+         <label class="col-xs-3 control-label"for="">账户：</label>
+         <div class="col-xs-8">
+           <input type="text" class="form-control" placeholder="来着何人，报上名来" ng-model="user.name" name="username" required ng-minlength="2" user-name>
+           <p class="errorM ng-hide" ng-show="form.username.$invalid && form.username.$dirty">
+             <span ng-show="form.username.$error.required">不能为空！</span>
+             <span ng-show="form.username.$error.minlength">最小长度为2个字符</span>
+             <span ng-show="form.username.$error.userName">该用户名已被注册</span>
+           </p>
+         </div>
+       </div>
+       <div class="form-group">
+         <label class="col-xs-3 control-label"for="">密码：</label>
+         <div class="col-xs-8">
+           <input type="password" class="form-control" ng-model="user.password" required ng-minlength="6" name="password">
+           <p class="errorM ng-hide" ng-show="form.password.$invalid && form.password.$dirty">
+             <span ng-show="form.password.$error.required">不能为空</span>
+             <span ng-show="form.password.$error.minlength">最小长度为6个字符</span>
+           </p>
+         </div>
+       </div>
+       <div class="form-group">
+         <label class="col-xs-3 control-label"for="">确认密码：</label>
+         <div class="col-xs-8">
+           <input type="password" class="form-control" ng-model="user.Tpassword" name="Tpassword" required pwd-repeat>
+           <p class="errorM ng-hide" ng-show="form.Tpassword.$invalid && form.Tpassword.$dirty">
+             <span ng-show="form.Tpassword.$error.required">不能为空</span>
+             <span ng-show="form.Tpassword.$error.pwdRepeat">两次密码不一致</span>
+           </p>
+         </div>
+       </div>
+       <div class="dl">
+         <button class="btn btn-primary" ng-disabled="form.$invalid">注册</button>
+         <span class="span">已有账户？<a href="#!/login">登录</a></span>
+       </div>
+     </form>
+   </fieldset>
+</div>

@@ -1,0 +1,1 @@
+"use strict";!function(o){o.module("logonApp",["ngRoute","loginApp","registerApp","detailApp"]).config(["$routeProvider",function(o){o.otherwise({redirectTo:"/login"})}])}(angular);
